@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Chainer – 一个灵活的神经网络框架 &mdash; chainer-zh  文档</title>
+  <title>&lt;no title&gt; &mdash; chainer-zh  文档</title>
   
 
   
@@ -28,8 +28,7 @@
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="安装" href="install.html" /> 
+    <link rel="search" title="搜索" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -48,7 +47,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> chainer-zh
+            <a href="index.html" class="icon icon-home"> chainer-zh
           
 
           
@@ -102,7 +101,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">chainer-zh</a>
+          <a href="index.html">chainer-zh</a>
         
       </nav>
 
@@ -131,15 +130,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Chainer – 一个灵活的神经网络框架</li>
+      <li>&lt;no title&gt;</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/imports.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -152,43 +151,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="chainer">
-<h1>Chainer – 一个灵活的神经网络框架<a class="headerlink" href="#chainer" title="永久链接至标题">¶</a></h1>
-<p><a class="reference external" href="https://chainer.org">Chainer</a> 是一个强力，灵活并且直观的深度学习框架。</p>
-<ul class="simple">
-<li>Chainer 支持 CUDA，只需数行代码便可利用 GPU，也能轻松运行于数个 GPU。</li>
-<li>Chainer 支持多种神经网络结构，包括前反馈网络，卷积网络，递归网络和循环网络，亦支持批次训练。</li>
-<li>正向计算可以包括 Python 的任何控制流语句，而不会缺少反向传播的能力。这使得代码更加直观并易于调试。</li>
-</ul>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Chainer 文档</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">安装</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#id2">推荐环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#id3">需求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#chainer">安装 Chainer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#id8">卸载 Chainer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#id9">升级 Chainer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#id10">重新安装 Chainer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#docker-chainer">在 Docker 中运行 Chainer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#id11">常见问题</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="guides/index.html">指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="guides/define_by_run.html">运行即定义</a></li>
-<li class="toctree-l2"><a class="reference internal" href="guides/variables.html">变量</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">其他</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tips.html">提示</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/chainer">论坛</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/chainer-community/awesome-chainer">实例</a></li>
-</ul>
-</div>
+  <blockquote>
+<div>在此教程的样例代码中，为了简洁我们假设以下库已被导入。</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">chainer</span>
+<span class="kn">from</span> <span class="nn">chainer.backends</span> <span class="kn">import</span> <span class="n">cuda</span>
+<span class="kn">from</span> <span class="nn">chainer</span> <span class="kn">import</span> <span class="n">Function</span><span class="p">,</span> <span class="n">gradient_check</span><span class="p">,</span> <span class="n">report</span><span class="p">,</span> <span class="n">training</span><span class="p">,</span> <span class="n">utils</span><span class="p">,</span> <span class="n">Variable</span>
+<span class="kn">from</span> <span class="nn">chainer</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">iterators</span><span class="p">,</span> <span class="n">optimizers</span><span class="p">,</span> <span class="n">serializers</span>
+<span class="kn">from</span> <span class="nn">chainer</span> <span class="kn">import</span> <span class="n">Link</span><span class="p">,</span> <span class="n">Chain</span><span class="p">,</span> <span class="n">ChainList</span>
+<span class="kn">import</span> <span class="nn">chainer.functions</span> <span class="kn">as</span> <span class="nn">F</span>
+<span class="kn">import</span> <span class="nn">chainer.links</span> <span class="kn">as</span> <span class="nn">L</span>
+<span class="kn">from</span> <span class="nn">chainer.training</span> <span class="kn">import</span> <span class="n">extensions</span>
+</pre></div>
 </div>
 
 
@@ -196,13 +170,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="install.html" class="btn btn-neutral float-right" title="安装" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-    </div>
   
 
   <hr/>
